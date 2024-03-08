@@ -1,0 +1,27 @@
+{
+  "name": "new-learning",
+  "version": "1.0.0",
+  "description": "This repository contains my learning data.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaimPTechDharmesh/New-learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaimPTechDharmesh/New-learning/issues"
+  },
+  "homepage": "https://github.com/RaimPTechDharmesh/New-learning#readme",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.2.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  }
+}
