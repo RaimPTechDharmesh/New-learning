@@ -1,0 +1,10 @@
+@media (max-width: 600px) {
+    .MuiBox-root {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .MuiStack-root {
+        justify-content: center;
+    }
+}

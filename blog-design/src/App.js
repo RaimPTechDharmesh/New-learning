@@ -4,9 +4,10 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from './Component/Header/Header';
 import Home from "./Component/Home";
 import BlogGrid from "./Component/blog/blogGrid";
-import OurBlog from "./Component/blog/ourBlog";
+import OurBlog from "./Component/blog/ourBlog/ourBlog";
 import BlogDetails from "./Component/blog/blogDetails";
 import OurLatestBlog from "./Component/blog/ourLatestBlog";
+import Footer from "./Component/Footer/Footer";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/blog/blogDetails" element={<BlogDetails/>} />
                 <Route path="/blog/ourLatestBlog" element={<OurLatestBlog/>} />
             </Routes>
+            <Footer/>
         </Router>
     );
 }
