@@ -39,7 +39,7 @@ const Header = () => {
     };
 
     return (
-        <AppBar position="static" style={{backgroundColor: '#2b4560'}}>
+        <AppBar position="fixed" style={{backgroundColor: '#000000', height: '60px', position: 'fixed'}}>
             <Toolbar>
                 <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
                     <Logo src={logo} alt="Logo" />
