@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Header from './Component/Header';
+import Header from './Component/Header/Header';
 import Home from "./Component/Home";
 import BlogGrid from "./Component/blog/blogGrid";
 import OurBlog from "./Component/blog/ourBlog";

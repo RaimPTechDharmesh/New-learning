@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import {AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Button, Link} from '@mui/material';
+import {AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Button, Link, styled} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import logo from '../../Logo.png';
+
+const Logo = styled('img')(({ theme }) => ({
+    height: '100px',
+    width: '100px',
+    marginRight: theme.spacing(2),
+}));
 
 const Header = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [moreAnchorEl, setMoreAnchorEl] = useState(null);
     const [aboutAnchorEl, setAboutAnchorEl] = useState(null);
     const [blogAnchorEl, setBlogAnchorEl] = useState(null);
-
 
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -33,10 +39,10 @@ const Header = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundColor: '#2b4560'}}>
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    MyLogo
+                <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+                    <Logo src={logo} alt="Logo" />
                 </Typography>
                 <div>
                     <Button color="inherit" component={Link} href="/home">Home</Button>
