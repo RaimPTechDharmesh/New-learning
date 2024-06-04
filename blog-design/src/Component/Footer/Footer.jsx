@@ -1,27 +1,27 @@
 import React from 'react';
-import {Box, Typography, Link, Stack, styled} from '@mui/material';
+import { Box, Typography, Stack, styled } from '@mui/material';
 import logo from "../../Logo.png";
 
 const Logo = styled('img')(({ theme }) => ({
-    height: '100px',
-    width: '100px',
+    height: '60px', // Adjust logo height for better scaling
+    width: 'auto',  // Allow logo to scale proportionally
     marginRight: theme.spacing(2),
 }));
 
 const Footer = () => {
     return (
-        <Box sx={{ bgcolor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Box sx={{ bgcolor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', px: 4, py: 2 }}>
             <Logo src={logo} alt="Logo" />
             <Stack direction="row" spacing={2}>
                 <Typography variant="body2" color="white">
                     © 2024 My Website
                 </Typography>
-                <Link href="#" underline="none" color="white">
+                <Typography variant="body2" color="white">
                     Terms
-                </Link>
-                <Link href="#" underline="none" color="white">
+                </Typography>
+                <Typography variant="body2" color="white">
                     Privacy
-                </Link>
+                </Typography>
             </Stack>
         </Box>
     );
