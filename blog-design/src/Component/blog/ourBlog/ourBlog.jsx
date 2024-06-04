@@ -1,7 +1,14 @@
 import React from "react";
-import {Container, Typography, Grid, Card, CardContent, CardMedia, Box} from '@mui/material';
+import {Container, Typography, Grid, Card, CardContent, CardMedia, Box, Link} from '@mui/material';
+import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 
 function OurBlog() {
+
+    const handleClick = () => {
+        const youtubeUrl = 'https://www.youtube.com/';
+        window.open(youtubeUrl, '_blank');
+    }
+
     return (
         <>
             <div>
@@ -140,34 +147,56 @@ function OurBlog() {
                 </Container>
             </div>
             <Box sx={{ backgroundColor: 'white' }}>
-                <section style={{
-                        padding: '4rem 0rem',
+                <section
+                    style={{
+                        padding: '3rem 1rem',
                         margin: '0 auto',
                         maxWidth: '1200px',
-                    }}>
-                    <div style={{
-                            width: ['100%', '500px'],
-                            maxWidth: '425px',
+                    }}
+                >
+                    <div
+                        style={{
+                            width: '100%', // Full width on all screens
                             display: 'flex',
                             flexDirection: 'column',
-                        }}>
-                        <Typography variant="body1" color="black" sx={{ fontFamily: 'Basis-bold' }}>
+                            marginBottom: '2rem',
+                        }}
+                    >
+                        <Typography variant="h5" color="black" sx={{ fontFamily: 'Basis-bold', marginBottom: '1rem' }}>
                             BELIEF IN ACTION
                         </Typography>
-                        <Typography variant="h5" color="black" sx={{ fontFamily: 'Houschka-medium', marginBottom: '2rem' }}>
+                        <Typography variant="h4" color="black" sx={{ fontFamily: 'Houschka-medium' }}>
                             TCS Summit Europe 2023
                         </Typography>
-                        <Typography variant="body2" color="black" sx={{ fontFamily: 'Basis-regular', marginBottom: '2rem' }}>
-                            Accelerating the sustainable enterprise During the summit, leaders will discuss how a culture of innovation and the use of intelligent technologies can accelerate the next stage of sustainable growth.
+                        <Typography variant="body1" color="black" sx={{ fontFamily: 'initial', letterSpacing: '0.10em' }}>
+                            Accelerating the sustainable enterprise
+                        </Typography>
+                        <Typography variant="body1" color="black" sx={{ fontFamily: 'initial', marginBottom: '0' }}>
+                            During the summit, leaders will discuss how a culture of innovation and the use of intelligent technologies can accelerate the next stage of sustainable growth.
+                            TCS Summit Europe is an exclusive, invite-only event that brings together UK and Europe’s most senior business leaders. Over the course of three days, the TCS Summit Europe
+                            provides an exclusive forum for C-suite executives to learn from global influencers in politics, sports and business.
                         </Typography>
                     </div>
-                    <div style={{ width: ['100%', '478px'], maxWidth: '478px' }}>
+                    <div style={{ position: 'relative', textAlign: 'center'}}>
                         <CardMedia
                             component="img"
-                            href="https://www.youtube.com/watch?v=VIDEO_ID"
                             image="https://www.tcs.com/content/dam/global-tcs/en/images/who-we-are/news/analyst-reports/banking-operations-leader-everest-group-Card.jpg/jcr:content/renditions/cq5dam.thumbnail.1280.765.jpeg"
                             alt=""
-                            sx={{ width: '100%', height: '279px', borderRadius: '10px' }}
+                            sx={{ width: '100%', height: '290px', borderRadius: '10px' }}
+                        />
+                        <PlayCircleOutlinedIcon onClick={handleClick}
+                            sx={{ width: '76px',
+                                height: '76px',
+                                color: 'lightGray',
+                                position: 'absolute',
+                                left: '50%',
+                                top: '50%',
+                                transform: 'translate(-50%, -50%)',
+                                '&:hover': {
+                                    color: 'darkGray',
+                                    opacity: 0.9,
+                                },
+                          }}
                         />
                     </div>
                 </section>
